@@ -1,5 +1,5 @@
 Package: coarseDataTools
-Version: 0.1
+Version: 0.2
 Date: 2010-04-01
 Title: A collection of functions to help with analysis of coarse
         infectious disease data
@@ -12,6 +12,6 @@ Description: This package contains functions to analyze coarse data.
         disease: in particular, problems with estimating the incubation
         period and the case fatality ratio of a given disease.  Sample
         data files are included in the package.
-Packaged: 2010-04-08 18:59:01 UTC; nick
+Packaged: 2010-05-05 08:44:54 UTC; nick
 Repository: CRAN
-Date/Publication: 2010-04-09 17:30:37
+Date/Publication: 2010-05-05 11:26:56

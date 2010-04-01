@@ -67,9 +67,10 @@ dat[c(idx.for.Estep, idx.for.Estep + 60), "new.times"] <- rep(new.times, + 2)
 assumed.nu = c(0, 0.3, 0.4, 0.3)
 alpha.start <- rep(0, 22)
 
-## caution! this next line may take a while to run.
-cfr.ests <- EMforCFR(assumed.nu = assumed.nu, alpha.start.values = alpha.start, 
-full.data = dat, verb = FALSE, SEM.var = TRUE, max.iter = 500, tol = 1e-05)
+## caution! this next line may take several minutes (5-10, depanding on 
+##    the speed of your machine) to run.
+\dontrun{cfr.ests <- EMforCFR(assumed.nu = assumed.nu, alpha.start.values = alpha.start, 
+full.data = dat, verb = FALSE, SEM.var = TRUE, max.iter = 500, tol = 1e-05)}
 
 
 }
