@@ -1,0 +1,3 @@
+ChangeLog file for coarseDataTools
+
+v0.1 - added functions (with documentation) for estimating the relative case fatality ratio.  Currently only tested on situations with two groups of interest, i.e. two levels of covariate J.
