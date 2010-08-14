@@ -2,9 +2,7 @@
 \alias{ProfileLiks}
 \alias{pl.mu}
 \alias{pl.sigma}
-\title{
-Profile likelihood helper functions used by dic.fit().
-}
+\title{Profile likelihood helper functions used by dic.fit().}
 \description{
 Calculates the likeliood of a dataset given parameters of a log-normal distribution.  These functions are not meant to be called directly by the end user but are used by the \code{\link{dic.fit}} function to determine starting values for the log-scale median and log-log-scale dispersion of the distribution.}
 \usage{

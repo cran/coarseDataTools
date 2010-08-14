@@ -54,23 +54,23 @@ SEM algorithm}
 
 ## This is code from the CFR vignette provided in the documentation.
 
-data(simulatedOutbreakDeaths)
+data(simulated.outbreak.deaths)
 min.cases <- 10 
-N.1 <- dat[1:60, "N"] 
-N.2 <- dat[61:120, "N"] 
+N.1 <- simulated.outbreak.deaths[1:60, "N"] 
+N.2 <- simulated.outbreak.deaths[61:120, "N"] 
 first.t <- min(which(N.1 > min.cases & N.2 > min.cases)) 
 last.t <- max(which(N.1 > min.cases & N.2 > min.cases)) 
 idx.for.Estep <- first.t:last.t 
 new.times <- 1:length(idx.for.Estep) 
-dat <- cbind(dat, new.times = NA) 
-dat[c(idx.for.Estep, idx.for.Estep + 60), "new.times"] <- rep(new.times, + 2)
+simulated.outbreak.deaths <- cbind(simulated.outbreak.deaths, new.times = NA) 
+simulated.outbreak.deaths[c(idx.for.Estep, idx.for.Estep + 60), "new.times"] <- rep(new.times, + 2)
 assumed.nu = c(0, 0.3, 0.4, 0.3)
 alpha.start <- rep(0, 22)
 
 ## caution! this next line may take several minutes (5-10, depanding on 
 ##    the speed of your machine) to run.
 \dontrun{cfr.ests <- EMforCFR(assumed.nu = assumed.nu, alpha.start.values = alpha.start, 
-full.data = dat, verb = FALSE, SEM.var = TRUE, max.iter = 500, tol = 1e-05)}
+full.data = simulated.outbreak.deaths, verb = FALSE, SEM.var = TRUE, max.iter = 500, tol = 1e-05)}
 
 
 }
