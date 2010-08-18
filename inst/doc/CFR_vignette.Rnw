@@ -16,7 +16,7 @@
 \section{Introduction to the data}
 
 The goal of this vignette is to provide a tutorial for implementing the
-case fatality ratio estimation methods available in the coarseDataTools R package.  To illustrate the methods, we will estimate a
+case fatality ratio estimation methods available in the coarseDat%aTools R package.  To illustrate the methods, we will estimate a
 relative case fatality ratio from a simulated outbreak dataset.
 
 
@@ -25,13 +25,13 @@ We begin by loading the package and a set of simulated data.
 
 <<label=sourcing>>=
 library(coarseDataTools)
-data(simulatedOutbreakDeaths)
+data(simulated.outbreak.deaths)
 @
 
 The data that we have loaded is a simulated dataset with five
 columns.  Let's take a peek at the dataset.
 <<label=datapeek>>=
-dat[15:20,]
+simulated.outbreak.deaths[15:20,]
 @
 The rows index observations at a particular time and group.  The columns are defined as follows:
 \begin{itemize}
@@ -54,8 +54,8 @@ where both groups have at least 10 total cases observed.
 min.cases <- 10
 
 ## observed cases
-N.1 <- dat[1:60,"N"]
-N.2 <- dat[61:120,"N"]
+N.1 <- simulated.outbreak.deaths[1:60,"N"]
+N.2 <- simulated.outbreak.deaths[61:120,"N"]
 
 ## subset to run analyis on times with greater than min.cases
 first.t <-  min(which(N.1 > min.cases & N.2 > min.cases))
@@ -64,14 +64,14 @@ idx.for.Estep <- first.t:last.t
 
 ## find and label the subset of times to be used for estimation routine
 new.times <- 1:length(idx.for.Estep)
-dat <- cbind(dat, new.times=NA)
-dat[c(idx.for.Estep, idx.for.Estep+60),"new.times"] <- rep(new.times, 2)
+simulated.outbreak.deaths <- cbind(simulated.outbreak.deaths, new.times=NA)
+simulated.outbreak.deaths[c(idx.for.Estep, idx.for.Estep+60),"new.times"] <- rep(new.times, 2)
 @
 
 If we look at the new data matrix, we can see the new variable
 that we've made and that will be used in the analysis:
 <<label=datapeek2>>=
-dat[15:20,]
+simulated.outbreak.deaths[15:20,]
 @
 \section{Running an analysis}
 
@@ -109,7 +109,7 @@ function, $\tt{EMforCFR()}$, which generates three estimates of the
 CFR: the na\"ive, the reporting-rate-adjusted and the lag-adjusted estimators.
 <<label=runAnalysis, cache=TRUE>>=
 cfr.ests <- EMforCFR(assumed.nu=assumed.nu,
-alpha.start.values=alpha.start, full.data=dat, verb=FALSE,
+alpha.start.values=alpha.start, full.data=simulated.outbreak.deaths, verb=FALSE,
 SEM.var=TRUE, max.iter=500, tol=1e-5)
 @
 
