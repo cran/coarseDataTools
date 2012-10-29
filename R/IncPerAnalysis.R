@@ -240,3 +240,18 @@ dic.getSE <- function(mu, log.s, Sig, ptiles){
 	ses <- sqrt(diag(t(df)%*%Sig%*%df))
 	return(ses)
 }
+
+
+get.obs.type <- function(dat) {
+    type <- rep(0, nrow(dat))
+
+    #get the single interval censored
+    type[dat[,"EL"]==dat[,"ER"]]<-1
+    type[dat[,"SL"]==dat[,"SR"]]<-1
+    type[dat[,"ER"]>=dat[,"SL"]]<-1
+
+    #some of those are actually exact!
+    type[(dat[,"EL"]==dat[,"ER"]) & (dat[,"SL"]==dat[,"SR"])]<- 2
+
+    return(type)
+}
