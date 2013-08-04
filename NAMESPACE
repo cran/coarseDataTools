@@ -1,10 +1,16 @@
-# Default NAMESPACE created by R
-# Remove the previous line if you edit this file
-
-# Export all names
-exportPattern(".")
-
-# Import all packages listed as Imports or Depends
-import(
-  survival
-)
+export(dic.fit.mcmc)
+export(dic.fit)
+export(EMforCFR)
+export(generate.coarse.data)
+export(get.obs.type)
+export(loglikhd)
+export(precision.simulation.coarse)
+export(precision.simulation.exact)
+export(precision.simulation)
+exportClasses(cd.fit.mcmc)
+exportClasses(cd.fit)
+exportMethods(logLik)
+exportMethods(plot)
+importFrom(graphics,plot)
+importFrom(MCMCpack,MCMCmetrop1R)
+importFrom(stats,logLik)
