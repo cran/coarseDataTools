@@ -1,6 +1,6 @@
-179acaa129a8f67916dc66afe1650e3f *ChangeLog
-7ecd291edb788e1b6620185bf9486a5d *DESCRIPTION
-b10b258884d05b2e14b102a1569b8212 *NAMESPACE
+99e678c4d42550f0c1b33ab92b926d37 *ChangeLog
+05d6f96844b726d7dd7b583d72aec942 *DESCRIPTION
+fea88a7fc7d4c8b03d561ab6ce4a3540 *NAMESPACE
 130b049b3efeff4132c91130ddeaa1fd *R/CFR_estimation.R
 85e0035156b9555404e92731dfdc079b *R/S4stuff.R
 f7f7bd6c57e34704bb9906ed4bf23396 *R/coarseDataTools-package.R
@@ -8,7 +8,8 @@ b10c9d8b2352dabe2615b89462673312 *R/dic.fit.R
 a546ec2b35ca3622987380baf83b2877 *R/dic.fit.mcmc.R
 8d470bb71ecdbcc5f6988f2765bd9d83 *R/get.obs.type.R
 4bdfc9ee2b45622c0297b869e3c7c8ea *R/sampleSizeSimulation.R
-31a2d1a14d7f4858db16bf1c08138a9c *README.md
+2556effd3a63aea258ffeafb07f8e12b *README.md
+be87bbd7ab06a49aa3d9595c32d6a767 *build/vignette.rds
 dbcde5fa83f194c175d82e8db0c0cdbc *data/exp.win.lengths.rda
 ab8bc3a3890a84251fb9e8f9d5ab4ce6 *data/fluA.inc.per.rda
 7655f403477e6d9a9daf1f1e0f2e8b22 *data/nycH1N1.rda
@@ -16,7 +17,7 @@ e89cf96d33f133cf052e2b22cd58a662 *data/simulated.outbreak.deaths.rda
 8d559f352fd9f4789bfd2dd26bec683b *inst/CITATION
 06fdff4b570c9232a0f8abe6f3d8ecf0 *inst/doc/CFR_vignette.R
 8a3d359db085231cbf4437126a84e0db *inst/doc/CFR_vignette.Rnw
-345ef41ea81e05aa38d58061e5de5bf4 *inst/doc/CFR_vignette.pdf
+d328a31160567b950ed222fc69ea3e08 *inst/doc/CFR_vignette.pdf
 bbf5d1349bc43cf9eb0d417c375b3e5b *man/EMforCFR.Rd
 e9d9f2273c84aa285737d563d56c27e7 *man/cd.fit.Rd
 0b01c0ed239233d54266ffb65a36ffa6 *man/cd.fit.mcmc.Rd
