@@ -1,10 +1,10 @@
-f9b083df2421e64ee84c75a0cf87bed4 *ChangeLog
-252f8616d2a9994fee9126aed441171e *DESCRIPTION
-b878d87d5528e394f49bb0a132f1033d *NAMESPACE
+f911ab6fe2ef90b68199475b73135e36 *ChangeLog
+6c056016cf2b28a9046e54059357332b *DESCRIPTION
+a790411282c0a17a01267e6840ff90b9 *NAMESPACE
 910b86ba42e8f183a9bf1d195db31bca *R/CFR_estimation.R
 5bab8b1071f69c3b96daf9a727d58ea7 *R/S4stuff.R
-a7d278873207153c0f3e524d8dc72ccf *R/coarseDataTools-package.R
-c01783cefd632c93345ab90ea3611c2c *R/dic.fit.R
+06aa7543b32195091c2f4f88905eddd2 *R/coarseDataTools-package.R
+947eef936ed4c7d1a6fe2ac5b0e85472 *R/dic.fit.R
 2799a413a644fb8d54330cf25dfc4525 *R/dic.fit.mcmc.R
 8d470bb71ecdbcc5f6988f2765bd9d83 *R/get.obs.type.R
 4bdfc9ee2b45622c0297b869e3c7c8ea *R/sampleSizeSimulation.R
@@ -17,7 +17,7 @@ e89cf96d33f133cf052e2b22cd58a662 *data/simulated.outbreak.deaths.rda
 2f524d250fdddbf910ee466b7a5393db *inst/CITATION
 06fdff4b570c9232a0f8abe6f3d8ecf0 *inst/doc/CFR_vignette.R
 8a3d359db085231cbf4437126a84e0db *inst/doc/CFR_vignette.Rnw
-38c9370563f5a2d100e2922c11deaa45 *inst/doc/CFR_vignette.pdf
+27f991948c52a59cb5ccdeee50c19b81 *inst/doc/CFR_vignette.pdf
 d0102dc27809d82e68eb3458b23b5f3f *man/EMforCFR.Rd
 c67c6027091cae0efe08aa8211ceeb65 *man/cd.fit.Rd
 7d5d605ad9e7b0bd0cc1af4c946f223c *man/cd.fit.mcmc.Rd
@@ -31,7 +31,7 @@ e50ec351e1f185ba52db2eaf0ad95069 *man/logLik-methods.Rd
 341d4674edcea59f46b9f0345b3e7582 *man/loglikhd.Rd
 0e8d56e4013f95d12f8945f5df2e65f8 *man/mcmc.erlang.Rd
 865915109a1d85490cd5002f0245f3e6 *man/mcmcpack.ll.Rd
-ec21e3f825fbc0d3a7bbf74a3000970f *man/nycH1N1.Rd
+0a9f0a1551099fbf8bab0370e37f561d *man/nycH1N1.Rd
 7470030358b8fde0800fa5c6bdce15fd *man/pgammaOff1.Rd
 ae798192dfeca60cd876720ceb9d00c3 *man/plot-methods.Rd
 4c46e2d57d8bcb90f148aed0451f2d2e *man/precision.simulation.Rd
