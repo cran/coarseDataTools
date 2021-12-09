@@ -1,21 +1,11 @@
-### R code from vignette source 'CFR_vignette.Rnw'
-
-###################################################
-### code chunk number 1: sourcing
-###################################################
+## ----label=sourcing-----------------------------------------------------------
 library(coarseDataTools)
 data(simulated.outbreak.deaths)
 
-
-###################################################
-### code chunk number 2: datapeek
-###################################################
+## ----label=datapeek-----------------------------------------------------------
 simulated.outbreak.deaths[15:20,]
 
-
-###################################################
-### code chunk number 3: preprocessing
-###################################################
+## ----label=preprocessing------------------------------------------------------
 ## set minimum number of observed cases for inclusion
 min.cases <- 10
 
@@ -33,34 +23,21 @@ new.times <- 1:length(idx.for.Estep)
 simulated.outbreak.deaths <- cbind(simulated.outbreak.deaths, new.times=NA)
 simulated.outbreak.deaths[c(idx.for.Estep, idx.for.Estep+60),"new.times"] <- rep(new.times, 2)
 
-
-###################################################
-### code chunk number 4: datapeek2
-###################################################
+## ----label=datapeek2----------------------------------------------------------
 simulated.outbreak.deaths[15:20,]
 
-
-###################################################
-### code chunk number 5: setValues
-###################################################
+## ----label=setValues----------------------------------------------------------
 assumed.nu = c(0, .3, .4, .3)
 alpha.start <- rep(0, 22)
 
-
-###################################################
-### code chunk number 6: runAnalysis
-###################################################
+## ----label=runAnalysis, cache=TRUE, warning=FALSE-----------------------------
 cfr.ests <- EMforCFR(assumed.nu=assumed.nu,
 alpha.start.values=alpha.start, full.data=simulated.outbreak.deaths, verb=FALSE,
-SEM.var=TRUE, max.iter=500, tol=1e-5)
+SEM.var=TRUE, max.iter=100, tol=1e-5)
 
-
-###################################################
-### code chunk number 7: estimationResults
-###################################################
+## ----label=estimationResults--------------------------------------------------
 cfr.ests$naive.rel.cfr
 cfr.ests$glm.rel.cfr
 cfr.ests$EM.rel.cfr
 cfr.ests$EM.rel.cfr.var.SEM
-
 
